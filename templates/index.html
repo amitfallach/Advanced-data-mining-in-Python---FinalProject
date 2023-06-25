@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Information</title>
+</head>
+<body>
+    <h1>Information</h1>
+    <form action="/predict" method="post">
+        <label for="City">City:</label>
+        <select name="City" id="City">
+            <option value="פתח תקווה">פתח תקווה</option>
+            <option value="נתניה">נתניה</option>
+            <option value="באר שבע">באר שבע</option>
+            <option value="הרצליה">הרצליה</option>
+            <option value="אריאל">אריאל</option>
+            <option value="דימונה">דימונה</option>
+            <option value="רחובות">רחובות</option>
+            <option value="גבעת שמואל">גבעת שמואל</option>
+            <option value="ירושלים">ירושלים</option>
+            <option value="שוהם">שוהם</option>
+            <option value="כפר סבא">כפר סבא</option>
+            <option value="רעננה">רעננה</option>
+            <option value="נהריה">נהריה</option>
+            <option value="זכרון יעקב">זכרון יעקב</option>
+            <option value="קרית ביאליק">קרית ביאליק</option>
+            <option value="חיפה">חיפה</option>
+            <option value="הוד השרון">הוד השרון</option>
+            <option value="תל אביב">תל אביב</option>
+            <option value="ראשון לציון">ראשון לציון</option>
+            <option value="יהוד מונוסון">יהוד מונוסון</option>
+            <option value="נס ציונה">נס ציונה</option>
+            <option value="אילת">אילת</option>
+            <option value="חולון">חולון</option>
+            <option value="מודיעין מכבים רעות">מודיעין מכבים רעות</option>
+            <option value="צפת">צפת</option>
+            <option value="בת ים">בת ים</option>
+            <option value="רמת גן">רמת גן</option>
+            <option value="נוף הגליל">נוף הגליל</option>
+            <option value="בית שאן">בית שאן</option>
+        </select><br><br>
+        <label for="type">type:</label>
+        <select name="type" id="type">
+            <option value="דירה">דירה</option>
+            <option value="בית פרטי">בית פרטי</option>
+            <option value="דירת גן">דירת גן</option>
+            <option value="דירת גג">דירת גג</option>
+            <option value="קוטג'">קוטג'</option>
+            <option value="דופלקס">דופלקס</option>
+            <option value="פנטהאוז">פנטהאוז</option>
+            <option value="מגרש">מגרש</option>
+        </select><br><br>
+        <label for="condition">Condition:</label>
+        <select name="condition" id="condition">
+            <option value="משופץ">משופץ</option>
+            <option value="שמור">שמור</option>
+            <option value="חדש">חדש</option>
+            <option value="לא צויין">לא צויין</option>
+            <option value="ישן">ישן</option>
+        </select><br><br>
+        <label for="city_area">City Area:</label>
+        <select name="city_area" id="city_area">
+            <option value="רמתיים">רמתיים</option>
+            <option value="לא צויין">לא צויין</option>
+            <option value="הדר">הדר</option>
+            <option value="מרכז העיר">מרכז העיר</option>
+            <option value="גיל עמל">גיל עמל</option>
+            <option value="הפרחים">הפרחים</option>
+            <option value="אם המושבות החדשה">אם המושבות החדשה</option>
+            <option value="נווה גן">נווה גן</option>
+            <option value="קרית הרב סלומון">קרית הרב סלומון</option>
+            <option value="המרכז השקט">המרכז השקט</option>
+            <option value="כפר גנים ב">כפר גנים ב</option>
+            <option value="קרול">קרול</option>
+            <option value="מחנה יהודה">מחנה יהודה</option>
+            <option value="קרית השרון">קרית השרון</option>
+            <option value="עיר ימים">עיר ימים</option>
+            <option value="מרכז העיר דרום">מרכז העיר דרום</option>
+            <option value="נוף הטיילת">נוף הטיילת</option>
+            <option value="נאות שקד">נאות שקד</option>
+            <option value="קרית רבין">קרית רבין</option>
+            <option value="רמת ידין">רמת ידין</option>
+            <option value="כפר גנים ג">כפר גנים ג</option>
+            <option value="אחדות">אחדות</option>
+            <option value="אם המושבות הותיקה">אם המושבות הותיקה</option>
+            <option value="קרית אליעזר פרי">קרית אליעזר פרי</option>
+            <option value="כפר גנים א">כפר גנים א</option>
+            <option value="רמות ב">רמות ב</option>
+            <option value="שכונה ד">שכונה ד</option>
+            <option value="שכונה ו">שכונה ו</option>
+            <option value="שכונה ב">שכונה ב</option>
+            <option value="שכונה יא">שכונה יא</option>
+            <option value="שכונה ג">שכונה ג</option>
+            <option value="שכונה ה">שכונה ה</option>
+            <option value="שכונה ט">שכונה ט</option>
+            <option value="הרצליה הצעירה">הרצליה הצעירה</option>
+            <option value="הירוקה המרכזית">הירוקה המרכזית</option>
+            <option value="המרינה">המרינה</option>
+            <option value="מרכז">מרכז</option>
+            <option value="ממשית">ממשית</option>
+            <option value="נאות הללי">נאות הללי</option>
+            <option value="יוספטל">יוספטל</option>
+            <option value="נווה דוד">נווה דוד</option>
+            <option value="חכמי ישראל תשלוז">חכמי ישראל תשלוז</option>
+            <option value="פרחי ארצנו">פרחי ארצנו</option>
+            <option value="שכונה לדוגמא">שכונה לדוגמא</option>
+            <option value="השחר">השחר</option>
+            <option value="מלכי ישראל">מלכי ישראל</option>
+            <option value="הנצחון">הנצחון</option>
+            <option value="רחובות הצעירה">רחובות הצעירה</option>
+            <option value="היובל">היובל</option>
+            <option value="רחובות המדע">רחובות המדע</option>
+            <option value="שעריים">שעריים</option>
+            <option value="רחובות ההולנדית">רחובות ההולנדית</option>
+            <option value="קרית דוד">קרית דוד</option>
+            <option value="רמת אילן">רמת אילן</option>
+            <option value="רמת הדר החדשה">רמת הדר החדשה</option>
+            <option value="רמת הדר">רמת הדר</option>
+            <option value="השכונה הותיקה">השכונה הותיקה</option>
+            <option value="גיורא">גיורא</option>
+            <option value="פסגת זאב">פסגת זאב</option>
+            <option value="קרית היובל">קרית היובל</option>
+            <option value="עין כרם">עין כרם</option>
+            <option value="קטמון או">קטמון או</option>
+            <option value="קרית משה">קרית משה</option>
+            <option value="ארמון הנציב">ארמון הנציב</option>
+            <option value="הר חומה">הר חומה</option>
+            <option value="רחביה">רחביה</option>
+            <option value="הגבעה הצרפתית">הגבעה הצרפתית</option>
+            <option value="רמת חן">רמת חן</option>
+            <option value="רצועת המלונות">רצועת המלונות</option>
+            <option value="בן ציון">בן ציון</option>
+            <option value="קרית נורדאו">קרית נורדאו</option>
+            <option value="נאות הרצל">נאות הרצל</option>
+            <option value="משכנות זבולון">משכנות זבולון</option>
+            <option value="מרכז העיר צפון">מרכז העיר צפון</option>
+            <option value="קריית חזני">קריית חזני</option>
+            <option value="גני הדר">גני הדר</option>
+            <option value="עין גנים">עין גנים</option>
+            <option value="יובלים">יובלים</option>
+            <option value="ברושים">ברושים</option>
+            <option value="כרמים">כרמים</option>
+            <option value="גבעולים">גבעולים</option>
+            <option value="חמניות">חמניות</option>
+            <option value="ורדים">ורדים</option>
+            <option value="השכונה הירוקה">השכונה הירוקה</option>
+            <option value="מוצקיןדובדבן הכפרכיסופים">מוצקיןדובדבן הכפרכיסופים</option>
+            <option value="אלי כהן">אלי כהן</option>
+            <option value="הזמר העברי">הזמר העברי</option>
+            <option value="מרכז דרום">מרכז דרום</option>
+            <option value="קרית שרת">קרית שרת</option>
+            <option value="2003">2003</option>
+            <option value="קרית דוד רמז">קרית דוד רמז</option>
+            <option value="לב הפארק">לב הפארק</option>
+            <option value="דרום מזרח">דרום מזרח</option>
+            <option value="לסטר">לסטר</option>
+            <option value="הדר גנים">הדר גנים</option>
+            <option value="שיכון מפם">שיכון מפם</option>
+            <option value="צמרת גנים">צמרת גנים</option>
+            <option value="שעריה">שעריה</option>
+            <option value="טלביה">טלביה</option>
+            <option value="רמת שרת">רמת שרת</option>
+            <option value="אכזיב">אכזיב</option>
+            <option value="גבעת כצנלסון">גבעת כצנלסון</option>
+            <option value="נוה מנחם בגין">נוה מנחם בגין</option>
+            <option value="עין שרה">עין שרה</option>
+            <option value="נוה אלון עמידר">נוה אלון עמידר</option>
+            <option value="אוסישקין">אוסישקין</option>
+            <option value="נווה שלו">נווה שלו</option>
+            <option value="גבעת עדן">גבעת עדן</option>
+            <option value="נווה הברון">נווה הברון</option>
+            <option value="מול היקב">מול היקב</option>
+            <option value="רמת צבי">רמת צבי</option>
+            <option value="המושבה">המושבה</option>
+            <option value="חלומות זכרון">חלומות זכרון</option>
+            <option value="גבעת הרקפות">גבעת הרקפות</option>
+            <option value="דרום">דרום</option>
+            <option value="צור שלום">צור שלום</option>
+            <option value="פרפר">פרפר</option>
+            <option value="אגמים">אגמים</option>
+            <option value="נוה פז">נוה פז</option>
+            <option value="רמות רמז">רמות רמז</option>
+            <option value="גאולה">גאולה</option>
+            <option value="קרית חיים מזרחית">קרית חיים מזרחית</option>
+            <option value="הדר הכרמל">הדר הכרמל</option>
+            <option value="אחוזה">אחוזה</option>
+            <option value="בת גלים">בת גלים</option>
+            <option value="עמישב">עמישב</option>
+            <option value="מרכז יפו">מרכז יפו</option>
+            <option value="נוה אביבים">נוה אביבים</option>
+            <option value="נוה שאנן">נוה שאנן</option>
+            <option value="צהלה">צהלה</option>
+            <option value="יפו ד">יפו ד</option>
+            <option value="הצפון החדש החלק הצפוני">הצפון החדש החלק הצפוני</option>
+            <option value="נאות אפקה א">נאות אפקה א</option>
+            <option value="שוק הפשפשים וצפון יפו">שוק הפשפשים וצפון יפו</option>
+            <option value="לב תל אביב החלק המערבי">לב תל אביב החלק המערבי</option>
+            <option value="לב תל אביב">לב תל אביב</option>
+            <option value="רמות צהלה">רמות צהלה</option>
+            <option value="הצפון החדש סביבת כיכר המדינה">הצפון החדש סביבת כיכר המדינה</option>
+            <option value="נווה עופר">נווה עופר</option>
+            <option value="נוה ישראל">נוה ישראל</option>
+            <option value="יד התשעה">יד התשעה</option>
+            <option value="השומר">השומר</option>
+            <option value="רביבים">רביבים</option>
+            <option value="קדמת ראשון">קדמת ראשון</option>
+            <option value="רמבם">רמבם</option>
+            <option value="נוה הדרים">נוה הדרים</option>
+            <option value="רמז">רמז</option>
+            <option value="כצנלסון">כצנלסון</option>
+            <option value="נווה ים">נווה ים</option>
+            <option value="נווה חוף">נווה חוף</option>
+            <option value="כלניות">כלניות</option>
+            <option value="קרית ראשון">קרית ראשון</option>
+            <option value="אברמוביץ">אברמוביץ</option>
+            <option value="נווה אפרים">נווה אפרים</option>
+            <option value="קרית סביונים">קרית סביונים</option>
+            <option value="הצפון הישן החלק הצפוני">הצפון הישן החלק הצפוני</option>
+            <option value="נוה שרת">נוה שרת</option>
+            <option value="תוכנית ל">תוכנית ל</option>
+            <option value="עגמי">עגמי</option>
+            <option value="צהלון ושיכוני חסכון">צהלון ושיכוני חסכון</option>
+            <option value="יד אליהו">יד אליהו</option>
+            <option value="יפו ג">יפו ג</option>
+            <option value="המשתלה">המשתלה</option>
+            <option value="קרית שלום">קרית שלום</option>
+            <option value="כרם התימנים">כרם התימנים</option>
+            <option value="הצפון הישן החלק הדרום מזרחי">הצפון הישן החלק הדרום מזרחי</option>
+            <option value="פלורנטין">פלורנטין</option>
+            <option value="נוה חן">נוה חן</option>
+            <option value="ביצרון">ביצרון</option>
+            <option value="הדר יוסף">הדר יוסף</option>
+            <option value="שיכון בבלי">שיכון בבלי</option>
+            <option value="רמת אביב ג">רמת אביב ג</option>
+            <option value="הצפון הישן החלק המרכזי">הצפון הישן החלק המרכזי</option>
+            <option value="נווה זמר">נווה זמר</option>
+            <option value="2005">2005</option>
+            <option value="ב">ב</option>
+            <option value="ג">ג</option>
+            <option value="ד">ד</option>
+            <option value="נווה זאב">נווה זאב</option>
+            <option value="ט">ט</option>
+            <option value="יא">יא</option>
+            <option value="ו">ו</option>
+            <option value="ה">ה</option>
+            <option value="קריית ספיר">קריית ספיר</option>
+            <option value="סביוני הכפר">סביוני הכפר</option>
+            <option value="הדרים">הדרים</option>
+            <option value="כפר סבא הצעירה">כפר סבא הצעירה</option>
+            <option value="וואלי valley">וואלי valley</option>
+            <option value="הדרי סמל">הדרי סמל</option>
+            <option value="מרכז העיר מערב">מרכז העיר מערב</option>
+            <option value="ארגמן">ארגמן</option>
+            <option value="שחמון">שחמון</option>
+            <option value="מצפה ים">מצפה ים</option>
+            <option value="אורים">אורים</option>
+            <option value="בשכונת גנים א">בשכונת גנים א</option>
+            <option value="קריית שרת">קריית שרת</option>
+            <option value="נאות שושנים">נאות שושנים</option>
+            <option value="שיכון ותיקים">שיכון ותיקים</option>
+            <option value="קרית אילון">קרית אילון</option>
+            <option value="קרית בן גוריון">קרית בן גוריון</option>
+            <option value="תל גיבורים">תל גיבורים</option>
+            <option value="שדרת המגדלים">שדרת המגדלים</option>
+            <option value="גילה">גילה</option>
+            <option value="רמת ורבר">רמת ורבר</option>
+            <option value="שיפר">שיפר</option>
+            <option value="בן גוריון כנען">בן גוריון כנען</option>
+            <option value="רמת הנשיא">רמת הנשיא</option>
+            <option value="דרום מערב">דרום מערב</option>
+            <option value="עמידרניצנה">עמידרניצנה</option>
+            <option value="בית וגן">בית וגן</option>
+            <option value="מתחם גן העיר">מתחם גן העיר</option>
+            <option value="רובע העסקים">רובע העסקים</option>
+            <option value="יד לבנים">יד לבנים</option>
+            <option value="רמת שקמה">רמת שקמה</option>
+            <option value="רמת גן">רמת גן</option>
+            <option value="הבורסה">הבורסה</option>
+            <option value="שכונת הראשונים">שכונת הראשונים</option>
+            <option value="מרכז העיר א">מרכז העיר א</option>
+            <option value="ארנונה תלפיות">ארנונה תלפיות</option>
+            <option value="נוף יזרעאל">נוף יזרעאל</option>
+            <option value="הר יונה ג">הר יונה ג</option>
+            <option value="שלום">שלום</option>
+            <option value="צפונית">צפונית</option>
+            <option value="אשכול">אשכול</option>
+            <option value="קריית משה">קריית משה</option>
+            <option value="גבעת מרדכי">גבעת מרדכי</option>
+            <option value="תלפיות">תלפיות</option>
+            <option value="בקעה">בקעה</option>
+            <option value="קטמון הישנה">קטמון הישנה</option>
+            <option value="נוף ציון">נוף ציון</option>
+            <option value="קריית רבין">קריית רבין</option>
+            <option value="נוף גנים">נוף גנים</option>
+            <option value="נוף הירדן">נוף הירדן</option>
+            <option value="נוף הגלבוע">נוף הגלבוע</option>
+            <option value="האקליפטוס">האקליפטוס</option>
+            <option value="קרית בן צבי רסקו">קרית בן צבי רסקו</option>
+        </select><br><br>
+        <label for="Area">Area:</label><br>
+        <input type="number" id="Area" name="Area"><br>
+        <label for="hasElevator">Has Elevator:</label><br>
+        <input type="checkbox" id="hasElevator" name="hasElevator" value="1"><br>
+        <label for="hasParking">Has Parking:</label><br>
+        <input type="checkbox" id="hasParking" name="hasParking" value="1"><br>
+        <label for="hasBars">Has Bars:</label><br>
+        <input type="checkbox" id="hasBars" name="hasBars" value="1"><br>
+        <label for="hasStorage">Has Storage:</label><br>
+        <input type="checkbox" id="hasStorage" name="hasStorage" value="1"><br>
+        <label for="hasBalcony">Has Balcony:</label><br>
+        <input type="checkbox" id="hasBalcony" name="hasBalcony" value="1"><br>
+        <label for="hasMamad">Has Mamad:</label><br>
+        <input type="checkbox" id="hasMamad" name="hasMamad" value="1"><br>
+        <label for="handicapFriendly">Handicap Friendly:</label><br>
+        <input type="checkbox" id="handicapFriendly" name="handicapFriendly" value="1"><br>
+        <label for="floor">Floor:</label><br>
+        <input type="number" id="floor" name="floor"><br>        
+        <input type="submit" value="Submit">
+    </form>
+    <h2>Predicted Price: {{ price }}</h2>
+
+</body>
+</html>
